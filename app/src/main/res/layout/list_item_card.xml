@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="100dp">
+
+    <data>
+
+        <variable
+            name="card"
+            type="com.example.android.hearthstoneproject.listclasscards.data.CardEntity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#34FFFFFF"
+        android:paddingBottom="20dp">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="418dp"
+            android:layout_height="0dp"
+            android:alpha=".6"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/cardImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/capture" />
+
+        <ImageView
+            android:id="@+id/cardImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:scaleType="fitXY"
+            app:imageUrl="@{card.cardImage}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/hearthstone_error_image" />
+
+        <TextView
+            android:id="@+id/cardTitle"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="@{card.cardName}"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toEndOf="@+id/cardImage"
+            app:layout_constraintTop_toTopOf="@+id/cardImage"
+            tools:text="Card Title" />
+
+        <TextView
+            android:id="@+id/cardRarity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@{card.cardRarity}"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/cardExpansion"
+            app:layout_constraintEnd_toEndOf="@+id/cardType"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardType"
+            app:layout_constraintTop_toBottomOf="@+id/cardType"
+            tools:text="Common" />
+
+        <TextView
+            android:id="@+id/cardType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@{card.cardType}"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/cardTitle"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardTitle"
+            app:layout_constraintTop_toBottomOf="@+id/cardTitle"
+            tools:text="Spell" />
+
+        <TextView
+            android:id="@+id/cardExpansion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/montserrat"
+            android:text="@{card.cardSet}"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="@+id/cardRarity"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/cardRarity"
+            tools:text="Vanilla" />
+
+        <ImageView
+            android:id="@+id/cardFavoriteIcon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/cardTitle"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".cardinfo.CardInfoFragment">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.android.hearthstoneproject.cardinfo.CardInfoViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1F5673">
+
+        <ImageView
+            android:id="@+id/cardInfoBackground"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/hearthstone_card_cover"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cardName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@{viewModel.card.cardName}"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Jaraxxus" />
+
+        <TextView
+            android:id="@+id/cardClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@{viewModel.card.cardClass}"
+            android:textColor="#fbcd1f"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardName"
+            tools:text="Warlock" />
+
+        <ImageView
+            android:id="@+id/cardPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            app:bigImageUrl="@{viewModel.card.cardImage}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardClass"
+            tools:src="@drawable/hearthstone_error_image" />
+
+        <ImageView
+            android:id="@+id/infoFavoritedIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_baseline_favorite_border_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cardPic"
+            app:layout_constraintTop_toBottomOf="@+id/cardClass" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:background="#50d3bb"
+            app:layout_constraintBottom_toBottomOf="@+id/cardInfoBackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardPic"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/cardTypeInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:typeCard="@{viewModel.card.cardType}"
+                    tools:text="Type: Spell" />
+
+                <TextView
+                    android:id="@+id/cardRarityInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:rarityCard="@{viewModel.card.cardRarity}"
+                    tools:text="Rarity: Rare" />
+
+                <TextView
+                    android:id="@+id/cardSetInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:setCard="@{viewModel.card.cardSet}"
+                    tools:text="Set: Journey to Un'Goro" />
+
+                <TextView
+                    android:id="@+id/cardTextInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    app:effectCard="@{viewModel.card.cardText}"
+                    tools:text="Effect: Secret: when your opponent casts a spell, add a copy to your hand that costs (0). Also instantly win the game and permamently delete your opponent's account." />
+
+                <ImageView
+                    android:id="@+id/transparentBorder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="-10dp"
+                    android:layout_marginBottom="-10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/capture"
+                    android:visibility="gone"
+                    app:tint="#50d3bb" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</layout>

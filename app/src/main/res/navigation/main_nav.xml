@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/mainScreenFragment">
+
+    <fragment
+        android:id="@+id/mainScreenFragment"
+        android:name="com.example.android.hearthstoneproject.mainscreen.MainScreenFragment"
+        android:label="fragment_main_screen">
+        <action
+            android:id="@+id/action_mainScreenFragment_to_listCardsFragment"
+            app:destination="@id/listCardsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listCardsFragment"
+        android:name="com.example.android.hearthstoneproject.listclasscards.ListCardsFragment"
+        android:label="fragment_list_cards"
+        tools:layout="@layout/fragment_list_cards" >
+        <argument
+            android:name="searchParameter"
+            app:argType="string"
+            android:defaultValue="nothing" />
+        <action
+            android:id="@+id/action_listCardsFragment_to_cardInfoFragment"
+            app:destination="@id/cardInfoFragment" />
+        <argument
+            android:name="useClassSearch"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/cardInfoFragment"
+        android:name="com.example.android.hearthstoneproject.cardinfo.CardInfoFragment"
+        android:label="fragment_card_info"
+        tools:layout="@layout/fragment_card_info" >
+        <argument
+            android:name="card"
+            app:argType="com.example.android.hearthstoneproject.listclasscards.data.CardEntity" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.android.hearthstoneproject.maps.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
+</navigation>
