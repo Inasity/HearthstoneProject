@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialiconsoutlined/location_on/outline_location_on_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/arrow_back_ios/baseline_arrow_back_ios_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -33,7 +33,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="ic_outline_location_on_24" />
+                            <entry key="color" value="f2d149" />
+                            <entry key="outputName" value="arrow_back_yellow" />
                             <entry key="sourceFile" value="H:\BPS-Internship\BPS-Syntax-Lessons\Android-Lessons\HearthstoneProject" />
                           </map>
                         </option>

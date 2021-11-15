@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.android.hearthstoneproject.databinding.FragmentListCardsBinding
 import com.example.android.hearthstoneproject.listclasscards.data.ListCardsDatabase
@@ -39,6 +40,12 @@ class ListCardsFragment : Fragment() {
         binding.lifecycleOwner = this
 
         binding.viewModel = viewModel
+
+        binding.listCardsBackArrow.setOnClickListener {
+            it.findNavController().navigate(
+                ListCardsFragmentDirections.actionListCardsFragmentToMainScreenFragment()
+            )
+        }
 
         setHasOptionsMenu(true)
 

@@ -9,8 +9,10 @@ import androidx.lifecycle.viewModelScope
 import com.example.android.hearthstoneproject.network.networkmodel.HearthstoneStore
 import com.example.android.hearthstoneproject.network.networkmodel.ServiceResult
 import com.example.android.hearthstoneproject.network.repo.HearthStoneRepo
+import com.example.android.hearthstoneproject.secret.API.API_KEY
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import timber.log.Timber
 
 class MapsViewModel(application: Application, val repo: HearthStoneRepo)
     : AndroidViewModel(application){
@@ -20,7 +22,7 @@ class MapsViewModel(application: Application, val repo: HearthStoneRepo)
         get() = _storeFeed
 
     fun getStores(location: String, radius: Int, type: String,
-                  key: String = "AIzaSyCiJxfTYJfP57FLWYGYmmDjikgCpaBhXjs") {
+                  key: String = API_KEY) {
 
         val dispatcher = Dispatchers.IO
 
@@ -30,15 +32,15 @@ class MapsViewModel(application: Application, val repo: HearthStoneRepo)
                 location = location, radius = radius, type = type, key = key)) {
                 is ServiceResult.Success -> {
                     _storeFeed.postValue(response.data)
-                    Log.d("Zelda", "Got the stores baby. ${response.data?.results}")
+                    Timber.d("Got the stores baby. " + response.data?.results)
                 }
 
                 is ServiceResult.Error -> {
-                    Log.d("Zelda","Error was found when calling Heartstone stores :: ${response.exception}")
+                    Timber.d("Error was found when calling Heartstone stores :: " + response.exception)
                 }
 
                 else -> {
-                    Log.d("Zelda","Oh- oh... You've done fucked up...")
+                    Timber.d("Uninstall life please")
                 }
             }
         }

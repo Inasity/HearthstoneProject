@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.android.hearthstoneproject.R
 import com.example.android.hearthstoneproject.databinding.FragmentCardInfoBinding
@@ -40,6 +41,12 @@ class CardInfoFragment : Fragment() {
         binding.viewModel = viewModel
 
         setHasOptionsMenu(true)
+
+        binding.cardInfoBackground.setOnClickListener {
+            it.findNavController().navigate(
+                CardInfoFragmentDirections.actionCardInfoFragmentToListCardsFragment2()
+            )
+        }
 
         if(viewModel.card.cardType == null)
         {

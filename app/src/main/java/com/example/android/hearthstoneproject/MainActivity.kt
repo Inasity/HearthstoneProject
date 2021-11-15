@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun transparentStatusAndNavigation() {
-        //make full transparent statusBar
         setWindowFlag(
             WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
                     or WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION, true

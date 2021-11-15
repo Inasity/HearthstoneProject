@@ -29,6 +29,9 @@
             android:name="useClassSearch"
             app:argType="integer"
             android:defaultValue="0" />
+        <action
+            android:id="@+id/action_listCardsFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
     </fragment>
     <fragment
         android:id="@+id/cardInfoFragment"
@@ -38,10 +41,17 @@
         <argument
             android:name="card"
             app:argType="com.example.android.hearthstoneproject.listclasscards.data.CardEntity" />
+        <action
+            android:id="@+id/action_cardInfoFragment_to_listCardsFragment2"
+            app:destination="@id/listCardsFragment" />
     </fragment>
     <fragment
         android:id="@+id/mapsFragment"
         android:name="com.example.android.hearthstoneproject.maps.MapsFragment"
         android:label="fragment_maps"
-        tools:layout="@layout/fragment_maps" />
+        tools:layout="@layout/fragment_maps" >
+        <action
+            android:id="@+id/action_mapsFragment_to_mainScreenFragment"
+            app:destination="@id/mainScreenFragment" />
+    </fragment>
 </navigation>

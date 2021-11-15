@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HearthstoneProject</string>
+    <string name="maps_dialog_distance">%s mi</string>
+    <string name="card_shop">Card Shop</string>
 </resources>

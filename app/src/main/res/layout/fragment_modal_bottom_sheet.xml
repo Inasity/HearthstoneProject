@@ -11,40 +11,36 @@
         <TextView
             android:id="@+id/locationTitle"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:background="#6200ee"
             android:fontFamily="@font/roboto"
             android:paddingLeft="25dp"
             android:paddingTop="15dp"
-            android:text="Hello Modal BottomSheet"
             android:textAlignment="textStart"
             android:textColor="@color/white"
             android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/locationAddress"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/dialog_directions_button"
+            app:layout_constraintEnd_toStartOf="@+id/dialog_directions_button"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Hearthstone store name" />
 
         <TextView
             android:id="@+id/locationAddress"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="43dp"
-            android:layout_marginBottom="1dp"
             android:drawableLeft="@drawable/hearthstone_logo"
             android:drawablePadding="10dp"
             android:fontFamily="@font/roboto"
             android:gravity="center"
             android:includeFontPadding="false"
             android:paddingLeft="15dp"
-            android:text="313 Noodle Ave."
-            android:textAlignment="textStart"
             android:textColor="@color/black"
             android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/locationTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/cardShopTextView"
+            tools:text="313 Noodle Ave." />
 
         <TextView
             android:id="@+id/cardShopTextView"
@@ -55,7 +51,7 @@
             android:paddingLeft="25dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="Card Shop"
+            android:text="@string/card_shop"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/distanceTextView"
@@ -71,12 +67,21 @@
             android:paddingTop="10dp"
             android:paddingRight="30dp"
             android:paddingBottom="10dp"
-            android:text="TextView"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/locationTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/locationTitle"
+            tools:text="1.78 mi"/>
+
+        <ImageView
+            android:id="@+id/dialog_directions_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="#6200ee"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/maps_directions_icon" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
