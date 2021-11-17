@@ -47,5 +47,4 @@ class ListCardsFragment : Fragment() {
 
         return binding.root
     }
-
 }

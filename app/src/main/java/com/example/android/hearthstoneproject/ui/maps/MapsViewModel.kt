@@ -1,9 +1,7 @@
 package com.example.android.hearthstoneproject.ui.maps
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import android.app.Application
+import androidx.lifecycle.*
 import com.example.android.hearthstoneproject.network.data.HearthstoneStore
 import com.example.android.hearthstoneproject.network.networkmodel.ServiceResult
 import com.example.android.hearthstoneproject.network.repo.GoogleMapsRepo
@@ -16,9 +14,10 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MapsViewModel @Inject constructor(
+    application: Application,
     private val GoogleMapsRepo: GoogleMapsRepo,
     private val dispatchers: Dispatchers
-    ) : ViewModel() {
+    ) : AndroidViewModel(application) {
 
     private val _storeFeed = MutableLiveData<HearthstoneStore?>()
     val storeFeed: LiveData<HearthstoneStore?>

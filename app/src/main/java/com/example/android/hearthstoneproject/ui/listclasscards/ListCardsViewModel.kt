@@ -1,6 +1,8 @@
 package com.example.android.hearthstoneproject.ui.listclasscards
 
 
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -18,10 +20,11 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ListCardsViewModel @Inject constructor(
+    application: Application,
     private val hearthStoneRepo: HearthStoneRepo,
     private val listCardsDatabaseDao: ListCardsDatabaseDao,
     private val dispatchers: Dispatchers
-) : ViewModel() {
+) : AndroidViewModel(application) {
 
     lateinit var cardEntityList: LiveData<List<CardEntity>>
 

@@ -21,7 +21,8 @@ import javax.inject.Inject
 class MainScreenViewModel @Inject constructor(
     application: Application,
     private val repo: HearthStoneRepo,
-    database: MainscreenDatabaseDao)
+    database: MainscreenDatabaseDao,
+    private val dispatcher: Dispatchers)
     : AndroidViewModel(application) {
 
     var boolean: Boolean = false
@@ -42,9 +43,7 @@ class MainScreenViewModel @Inject constructor(
     }
 
     fun getAllClasses() {
-        val dispatcher = Dispatchers.IO
-
-        viewModelScope.launch(dispatcher) {
+        viewModelScope.launch(dispatcher.IO) {
             when(val response = repo.fetchHearthStoneClasses()) {
                 is ServiceResult.Success -> {
                     _classFeed.postValue(response.data)
