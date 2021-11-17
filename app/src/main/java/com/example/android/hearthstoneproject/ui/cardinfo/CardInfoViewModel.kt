@@ -20,7 +20,7 @@ class CardInfoViewModel @Inject constructor(
 
     lateinit var card: CardEntity
 
-    suspend fun updateCard(card: CardEntity) {
+    private suspend fun updateCard(card: CardEntity) {
         withContext(dispatchers.IO) {
             database.update(card)
         }

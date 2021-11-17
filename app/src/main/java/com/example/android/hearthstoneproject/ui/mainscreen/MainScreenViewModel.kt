@@ -21,7 +21,7 @@ import javax.inject.Inject
 class MainScreenViewModel @Inject constructor(
     application: Application,
     private val repo: HearthStoneRepo,
-    private val database: MainscreenDatabaseDao)
+    database: MainscreenDatabaseDao)
     : AndroidViewModel(application) {
 
     var boolean: Boolean = false
@@ -65,7 +65,7 @@ class MainScreenViewModel @Inject constructor(
 
     fun whichFunctionToUse(): Int {
         boolean = _classFeed.value?.classes?.contains(searchParameter) ?: false
-        Timber.d("Boolean is " + boolean)
+        Timber.d("Boolean is $boolean")
         return if (boolean) {
             2
         } else if (!boolean) {

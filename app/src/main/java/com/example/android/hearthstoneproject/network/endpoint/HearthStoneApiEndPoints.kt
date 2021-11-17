@@ -1,13 +1,11 @@
 package com.example.android.hearthstoneproject.network.endpoint
 
-import com.example.android.hearthstoneproject.network.data.HearthStoneResponse
 import com.example.android.hearthstoneproject.network.data.HearthStoneCard
-import com.example.android.hearthstoneproject.network.data.HearthstoneStore
+import com.example.android.hearthstoneproject.network.data.HearthStoneResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.Path
-import retrofit2.http.Query
 
 interface HearthStoneApiEndPoints {
     @GET("/cards/classes/{classType}")

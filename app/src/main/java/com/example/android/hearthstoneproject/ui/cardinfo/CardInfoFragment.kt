@@ -15,7 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class CardInfoFragment : Fragment() {
 
-    val cardParamsFragmentArgs by navArgs<CardInfoFragmentArgs>()
+    private val cardParamsFragmentArgs by navArgs<CardInfoFragmentArgs>()
 
     private val viewModel: CardInfoViewModel by viewModels()
 
@@ -68,7 +68,7 @@ class CardInfoFragment : Fragment() {
             binding.infoFavoritedIcon.setImageResource(R.drawable.ic_baseline_favorite_border_24)
         }
 
-        binding.infoFavoritedIcon.setOnClickListener { v: View ->
+        binding.infoFavoritedIcon.setOnClickListener {
             viewModel.card.cardFavorited = !viewModel.card.cardFavorited
 
             if (viewModel.card.cardFavorited)
