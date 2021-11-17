@@ -21,7 +21,7 @@ import javax.inject.Inject
 class MainScreenViewModel @Inject constructor(
     application: Application,
     private val repo: HearthStoneRepo,
-    database: MainscreenDatabaseDao,
+    mainscreenDatabaseDao: MainscreenDatabaseDao,
     private val dispatcher: Dispatchers)
     : AndroidViewModel(application) {
 
@@ -31,7 +31,7 @@ class MainScreenViewModel @Inject constructor(
 
     private val _classFeed = MutableLiveData<HearthStoneResponse?>()
 
-    private val _classes : LiveData<List<ClassEntity>> = database.getAllClasses()
+    private val _classes : LiveData<List<ClassEntity>> = mainscreenDatabaseDao.getAllClasses()
     val classes : LiveData<List<ClassEntity>>
             get() = _classes
 
