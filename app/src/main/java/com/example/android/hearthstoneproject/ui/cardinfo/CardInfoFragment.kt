@@ -34,10 +34,8 @@ class CardInfoFragment : Fragment() {
 
         setHasOptionsMenu(true)
 
-        binding.cardInfoBackground.setOnClickListener {
-            it.findNavController().navigate(
-                CardInfoFragmentDirections.actionCardInfoFragmentToListCardsFragment2()
-            )
+        binding.cardInfoBackArrow.setOnClickListener {
+            it.findNavController().popBackStack()
         }
 
         if(viewModel.card.cardType == null)

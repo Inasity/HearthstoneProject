@@ -19,6 +19,8 @@ class CardInfoViewModel @Inject constructor(
     ) : AndroidViewModel(application) {
 
     lateinit var card: CardEntity
+    lateinit var searchParameter: String
+    var useClassSearch: Int = 0
 
     private suspend fun updateCard(card: CardEntity) {
         withContext(dispatchers.IO) {

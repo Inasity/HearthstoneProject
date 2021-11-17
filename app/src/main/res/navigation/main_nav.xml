@@ -41,9 +41,6 @@
         <argument
             android:name="card"
             app:argType="com.example.android.hearthstoneproject.ui.listclasscards.data.CardEntity" />
-        <action
-            android:id="@+id/action_cardInfoFragment_to_listCardsFragment2"
-            app:destination="@id/listCardsFragment" />
     </fragment>
     <fragment
         android:id="@+id/mapsFragment"
