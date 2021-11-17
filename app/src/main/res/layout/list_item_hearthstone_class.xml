@@ -7,7 +7,7 @@
 
         <variable
             name="hearthstoneClass"
-            type="com.example.android.hearthstoneproject.mainscreen.data.ClassEntity" />
+            type="com.example.android.hearthstoneproject.ui.mainscreen.data.ClassEntity" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

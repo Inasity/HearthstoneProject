@@ -1,28 +1,22 @@
 package com.example.android.hearthstoneproject.network.repo
 
-import com.example.android.hearthstoneproject.listclasscards.data.CardEntity
-import com.example.android.hearthstoneproject.network.networkmodel.HearthStoneCard
-import com.example.android.hearthstoneproject.network.networkmodel.HearthStoneResponse
-import com.example.android.hearthstoneproject.network.networkmodel.HearthstoneStore
+import com.example.android.hearthstoneproject.ui.listclasscards.data.CardEntity
+import com.example.android.hearthstoneproject.network.data.HearthStoneCard
+import com.example.android.hearthstoneproject.network.data.HearthStoneResponse
+import com.example.android.hearthstoneproject.network.endpoint.HearthStoneApiEndPoints
 import com.example.android.hearthstoneproject.network.networkmodel.ServiceResult
 import com.example.android.hearthstoneproject.network.repoImpl.HearthStoneRepoImpl
-import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 
 interface HearthStoneRepo {
-    suspend fun fetchHearthStoneClasses(viewModelDispatcher: CoroutineDispatcher)
+    suspend fun fetchHearthStoneClasses()
     : ServiceResult<HearthStoneResponse?>
 
-    suspend fun fetchHearthStoneClassCards(viewModelDispatcher: CoroutineDispatcher, className: String)
+    suspend fun fetchHearthStoneClassCards(className: String)
     : ServiceResult<List<HearthStoneCard>?>
 
-    suspend fun fetchSingleHearthstoneCard(viewModelDispatcher: CoroutineDispatcher, cardName: String)
+    suspend fun fetchSingleHearthstoneCard(cardName: String)
     : ServiceResult<List<HearthStoneCard>?>
-
-    suspend fun fetchHearthstoneStores(viewModelDispatcher: CoroutineDispatcher, location: String,
-    radius: Int, type: String, key: String)
-    : ServiceResult<HearthstoneStore?>
-
-
 
     fun convertHearthstoneCardsToCardEntities(cards: List<HearthStoneCard>): Array<CardEntity> {
         return cards.map {
@@ -41,8 +35,8 @@ interface HearthStoneRepo {
 
 
     companion object {
-        fun provideHeartStoneRepo(): HearthStoneRepo {
-            return HearthStoneRepoImpl()
+        fun provideHeartStoneRepo(dispatcher: Dispatchers, retroObject: HearthStoneApiEndPoints): HearthStoneRepo {
+            return HearthStoneRepoImpl(dispatcher, retroObject)
         }
     }
 }

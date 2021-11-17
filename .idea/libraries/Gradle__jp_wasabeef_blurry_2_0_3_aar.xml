@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: jp.wasabeef:blurry:2.0.3@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/feef101e4f2501ddecc4162614a79023/transformed/jetified-blurry-2.0.3/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/feef101e4f2501ddecc4162614a79023/transformed/jetified-blurry-2.0.3/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/feef101e4f2501ddecc4162614a79023/transformed/jetified-blurry-2.0.3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/f0bf0ed76c875a372c1b6bf3035e19cb/transformed/jetified-blurry-2.0.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f0bf0ed76c875a372c1b6bf3035e19cb/transformed/jetified-blurry-2.0.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/f0bf0ed76c875a372c1b6bf3035e19cb/transformed/jetified-blurry-2.0.3/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/jp.wasabeef/blurry/2.0.3/64d23dd67692866bb176af497bbaf426dd5b7684/blurry-2.0.3-javadoc.jar!/" />

@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.android.hearthstoneproject.mainscreen.MainScreenViewModel" />
+            type="com.example.android.hearthstoneproject.ui.mainscreen.MainScreenViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        tools:context="com.example.android.hearthstoneproject.MainActivity">
+        tools:context="com.example.android.hearthstoneproject.ui.MainActivity">
 
         <ImageView
             android:id="@+id/mainscreenBackground"

@@ -8,14 +8,14 @@
 
         <variable
             name="viewModel"
-            type="com.example.android.hearthstoneproject.listclasscards.ListCardsViewModel" />
+            type="com.example.android.hearthstoneproject.ui.listclasscards.ListCardsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#E400BCD4"
-        tools:context=".listclasscards.ListCardsFragment">
+        tools:context=".ui.listclasscards.ListCardsFragment">
 
         <ImageView
             android:id="@+id/cardListBackground"

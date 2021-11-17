@@ -1,12 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.jaeger.statusbarutil:library:1.4.0@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1ce2f0b33f4f95f80d468afd1484c377/transformed/jetified-library-1.4.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1ce2f0b33f4f95f80d468afd1484c377/transformed/jetified-library-1.4.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1ce2f0b33f4f95f80d468afd1484c377/transformed/jetified-library-1.4.0/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8191a9cc4fc4847359f0088bf2917560/transformed/jetified-library-1.4.0/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8191a9cc4fc4847359f0088bf2917560/transformed/jetified-library-1.4.0/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8191a9cc4fc4847359f0088bf2917560/transformed/jetified-library-1.4.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/bcafce187a7ac0fbd84983b6bdb6a551/transformed/jetified-library-1.4.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bcafce187a7ac0fbd84983b6bdb6a551/transformed/jetified-library-1.4.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/bcafce187a7ac0fbd84983b6bdb6a551/transformed/jetified-library-1.4.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jaeger.statusbarutil/library/1.4.0/4716a13354746ace11c64277c2c72a675449827f/library-1.4.0-javadoc.jar!/" />

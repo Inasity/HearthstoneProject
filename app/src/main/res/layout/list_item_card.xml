@@ -8,7 +8,7 @@
 
         <variable
             name="card"
-            type="com.example.android.hearthstoneproject.listclasscards.data.CardEntity" />
+            type="com.example.android.hearthstoneproject.ui.listclasscards.data.CardEntity" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

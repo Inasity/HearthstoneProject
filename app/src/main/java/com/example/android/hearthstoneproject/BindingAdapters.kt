@@ -8,10 +8,10 @@ import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.example.android.hearthstoneproject.listclasscards.CardAdapter
-import com.example.android.hearthstoneproject.listclasscards.data.CardEntity
-import com.example.android.hearthstoneproject.mainscreen.ClassesAdapter
-import com.example.android.hearthstoneproject.mainscreen.data.ClassEntity
+import com.example.android.hearthstoneproject.ui.listclasscards.CardAdapter
+import com.example.android.hearthstoneproject.ui.listclasscards.data.CardEntity
+import com.example.android.hearthstoneproject.ui.mainscreen.ClassesAdapter
+import com.example.android.hearthstoneproject.ui.mainscreen.data.ClassEntity
 
 @BindingAdapter("imageUrl")
 fun bindImage(imgView: ImageView, imgUrl: String?) {

@@ -1,8 +1,8 @@
 package com.example.android.hearthstoneproject.network.endpoint
 
-import com.example.android.hearthstoneproject.network.networkmodel.HearthStoneResponse
-import com.example.android.hearthstoneproject.network.networkmodel.HearthStoneCard
-import com.example.android.hearthstoneproject.network.networkmodel.HearthstoneStore
+import com.example.android.hearthstoneproject.network.data.HearthStoneResponse
+import com.example.android.hearthstoneproject.network.data.HearthStoneCard
+import com.example.android.hearthstoneproject.network.data.HearthstoneStore
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Header
@@ -29,12 +29,4 @@ interface HearthStoneApiEndPoints {
         @Header("x-rapidapi-key") key: String = "4291a61388msh1f5b018fde8a27bp16e251jsn494b88af4524",
         @Path("cardName") cardName: String
     ): Response<List<HearthStoneCard>>
-
-    @GET("/maps/api/place/nearbysearch/json")
-    suspend fun getStores(
-        @Query("location") location: String,
-        @Query("radius") radius: Int,
-        @Query("type") type: String,
-        @Query("key") key: String
-    ): Response<HearthstoneStore?>
 }
